@@ -21,3 +21,13 @@ Pour créer un objet, je vais instancié un objet à partir de sa classe.
 
 # Visibilité 
 La visibilité d'une propriété permet de définir si on peut lire et écrire dans cette propriété depuis un code externe à la classe. 
+- public = open bar => autorise l'accès aux propriétés et aux méthodes depuis l'extérieur, tout le monde peut faire ce qu'il veut (c'est-à-dire modifier à sa convenance, ceci représente donc un risque). L'intégrité du modèle comme source de vérité est menacée.
+- private = sécurisé => seul le code à l'intérieur de la classe peut modifier ma donnée (ou la lire).
+
+En quoi c'est utile ? Ca vérrouille l'accès à une propriété ou une méthode pour empêcher qu'un code externe à la classe modifie la valeur de la propriété ou accède à la méthode. Ceci nous permet de conserver l'intégrité du modèle comme source de vérité.
+
+# Getter
+Méthode publique d'une classe retournant la valeur d'une propriété privée
+
+# Setter 
+Méthode publique d'une classe permettant de modifier la valeur d'une propriété privée

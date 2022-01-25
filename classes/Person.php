@@ -42,11 +42,11 @@ class Person {
     public function presentMyPerson(){
         // $this fait toujours référence à l'objet qui dans ce cas est l'objet à l'origine de l'appel à la fonction
 
-        echo "Salut moi je m'appelle".$this->name.'<br>';
+        echo "Salut moi je m'appelle ".$this->name.'<br>';
         if($this->gender== 'man'){
-            echo 'Je suis une homme et je suis né le'.$this->birthday.'<br>';
+            echo 'Je suis une homme et je suis né le '.$this->birthdate.'<br>';
         } else {
-            echo 'Je suis une femme et je suis née le'.$this->birthdate.'<br>';
+            echo 'Je suis une femme et je suis née le '.$this->birthdate.'<br>';
         }
     }
 }

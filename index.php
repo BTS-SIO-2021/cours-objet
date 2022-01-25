@@ -37,8 +37,40 @@ presentMyPerson($personJohn);
 /* J'ai créé mon "moule", soit ma classe pour construire des objet Person. J'ai fait les choses bien, j'ai créé ma classe dans un fichier à part qui porte le nom de ma classe. 
 Je veux et je peux créer désormais des objets Person, PREMIERE CHOSE A FAIRE : j'inclue le(s) fichier(s) de classe dont j'ai besoin 
 */
-require 'classes/Person.php'; 
+require 'classes/Person.php';
+require 'classes/PersonSecured.php'; 
 
-$personJudicael = new Person('Judicael', 36, '03-11-1985', 'man', 180);
+$personJudicael = new Person('Judicael', 180, '03-11-1985', 'man', 36);
+
+var_dump($personJudicael);
+print_r($personJudicael);
+
+$personPaul = new Person('Paul', 175, '03-11-1987', 'man', 25);
+
+var_dump($personPaul);
+
+$personDoe = new Person();
+
+var_dump($personDoe);
+
+echo $personJudicael->presentMyPerson();
+echo $personPaul->presentMyPerson();    
+
+$personJudicael->name="Nolwen";
+
+var_dump($personJudicael);
+
+$personMathilde = new PersonSecured('MAthilde', 160,'03-11-1986','female', 35);
+
+var_dump($personMathilde);
+
+echo $personMathilde->getName();
+
+
+$personMathilde->__set('size', 120);
+
+var_dump($personMathilde);
+
+echo $personMathilde->__get('birthdate');
 
 ;?>
