@@ -39,6 +39,7 @@ Je veux et je peux créer désormais des objets Person, PREMIERE CHOSE A FAIRE :
 */
 require 'classes/Person.php';
 require 'classes/PersonSecured.php'; 
+require 'classes/BankAccount.php';
 
 $personJudicael = new Person('Judicael', 180, '03-11-1985', 'man', 36);
 
@@ -72,5 +73,9 @@ $personMathilde->__set('size', 120);
 var_dump($personMathilde);
 
 echo $personMathilde->__get('birthdate');
+
+$bankAccountTest = new BankAccount('FF-00-0056-0001', 'Mathilde', 'BNP', 'compte courant');
+
+var_dump($bankAccountTest);
 
 ;?>
