@@ -34,5 +34,11 @@ function presentMyPerson(array $personData){
 presentMyPerson($personJohn);
 
 // Maintenant on va faire la même chose en objet.
+/* J'ai créé mon "moule", soit ma classe pour construire des objet Person. J'ai fait les choses bien, j'ai créé ma classe dans un fichier à part qui porte le nom de ma classe. 
+Je veux et je peux créer désormais des objets Person, PREMIERE CHOSE A FAIRE : j'inclue le(s) fichier(s) de classe dont j'ai besoin 
+*/
+require 'classes/Person.php'; 
+
+$personJudicael = new Person('Judicael', 36, '03-11-1985', 'man', 180);
 
 ;?>
