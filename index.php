@@ -84,4 +84,10 @@ $balance = $bankAccountTest->getBalance();
 
 var_dump($balance);
 
+$bankOwner = $bankAccountTest->getOwner();
+
+var_dump($bankOwner);
+
+$bankOwner->presentMyPerson();
+
 ;?>

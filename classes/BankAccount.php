@@ -50,6 +50,10 @@ class BankAccount {
         return $this->balance;
     }
 
+    public function getOwner(){
+        return $this->owner;
+    }
+
 }
 
 ?>
