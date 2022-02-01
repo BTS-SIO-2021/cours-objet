@@ -17,12 +17,6 @@ class BankAccount {
         $this->type=$newType;
     }
 
-    public function credit($amount){
-        // bonne pratique venir contrôler ce que l'on recoit dans amount, exemple : est-ce bien un chiffre, ce chiffre est il positif ?
-        $this->balance+=$amount;
-    }
-
-
     /* 
 
     J'ai besoin que mon objet BankAccount ait accès à des fonctions  :
@@ -31,6 +25,30 @@ class BankAccount {
     - getBalance = fonction qui va me permettre de consulter combien de sous j'ai sur mon compte
         
     */
+
+    public function credit($amount){
+        // bonne pratique venir contrôler ce que l'on recoit dans amount, exemple : est-ce bien un chiffre, ce chiffre est il positif ?
+        $this->balance+=$amount;
+    }
+
+    public function debit($amount){
+        // Je vérifie si on va dépasser le découvert autorisé ?
+         if(($this->balance - $amount) >= $this->overdraft) {
+             $this->balance-=$amount;
+             return $this->balance;
+         }else {
+             // Si le découvert est dépassé, on annule l'opération
+             return false;
+         }
+    }
+
+    /*
+    getBalance est un type de méthode appelé GETTER. 
+    Il permet de donner accès en lecture à une propriété privée
+    */
+    public function getBalance(){
+        return $this->balance;
+    }
 
 }
 
