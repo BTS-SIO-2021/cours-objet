@@ -74,8 +74,14 @@ var_dump($personMathilde);
 
 echo $personMathilde->__get('birthdate');
 
-$bankAccountTest = new BankAccount('FF-00-0056-0001', 'Mathilde', 'BNP', 'compte courant');
+$bankAccountTest = new BankAccount('FF-00-0056-0001', $personMathilde, 'BNP', 'compte courant');
 
 var_dump($bankAccountTest);
+
+$bankAccountTest->credit(4000);
+
+$balance = $bankAccountTest->getBalance();
+
+var_dump($balance);
 
 ;?>
